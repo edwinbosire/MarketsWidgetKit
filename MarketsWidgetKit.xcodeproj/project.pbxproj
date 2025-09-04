@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6447D28A2E6A3737007B7DCC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6447D2892E6A3736007B7DCC /* WidgetKit.framework */; };
+		6447D28C2E6A3737007B7DCC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6447D28B2E6A3737007B7DCC /* SwiftUI.framework */; };
+		6447D29D2E6A3739007B7DCC /* MarketWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6447D2872E6A3736007B7DCC /* MarketWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6447D2672E6A33E7007B7DCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,47 @@
 			remoteGlobalIDString = 6447D2552E6A33E4007B7DCC;
 			remoteInfo = MarketsWidgetKit;
 		};
+		6447D29B2E6A3739007B7DCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6447D24E2E6A33E4007B7DCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6447D2862E6A3736007B7DCC;
+			remoteInfo = MarketWidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6447D2A22E6A3739007B7DCC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6447D29D2E6A3739007B7DCC /* MarketWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6447D2562E6A33E4007B7DCC /* MarketsWidgetKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketsWidgetKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6447D2662E6A33E7007B7DCC /* MarketsWidgetKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketsWidgetKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6447D2702E6A33E7007B7DCC /* MarketsWidgetKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketsWidgetKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6447D2872E6A3736007B7DCC /* MarketWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MarketWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6447D2892E6A3736007B7DCC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6447D28B2E6A3737007B7DCC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6447D29E2E6A3739007B7DCC /* Exceptions for "MarketWidgets" folder in "MarketWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6447D2862E6A3736007B7DCC /* MarketWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6447D2582E6A33E4007B7DCC /* MarketsWidgetKit */ = {
@@ -43,6 +83,14 @@
 		6447D2732E6A33E7007B7DCC /* MarketsWidgetKitUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MarketsWidgetKitUITests;
+			sourceTree = "<group>";
+		};
+		6447D28D2E6A3737007B7DCC /* MarketWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6447D29E2E6A3739007B7DCC /* Exceptions for "MarketWidgets" folder in "MarketWidgetsExtension" target */,
+			);
+			path = MarketWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +117,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6447D2842E6A3736007B7DCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6447D28C2E6A3737007B7DCC /* SwiftUI.framework in Frameworks */,
+				6447D28A2E6A3737007B7DCC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +135,8 @@
 				6447D2582E6A33E4007B7DCC /* MarketsWidgetKit */,
 				6447D2692E6A33E7007B7DCC /* MarketsWidgetKitTests */,
 				6447D2732E6A33E7007B7DCC /* MarketsWidgetKitUITests */,
+				6447D28D2E6A3737007B7DCC /* MarketWidgets */,
+				6447D2882E6A3736007B7DCC /* Frameworks */,
 				6447D2572E6A33E4007B7DCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +147,18 @@
 				6447D2562E6A33E4007B7DCC /* MarketsWidgetKit.app */,
 				6447D2662E6A33E7007B7DCC /* MarketsWidgetKitTests.xctest */,
 				6447D2702E6A33E7007B7DCC /* MarketsWidgetKitUITests.xctest */,
+				6447D2872E6A3736007B7DCC /* MarketWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6447D2882E6A3736007B7DCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6447D2892E6A3736007B7DCC /* WidgetKit.framework */,
+				6447D28B2E6A3737007B7DCC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +171,12 @@
 				6447D2522E6A33E4007B7DCC /* Sources */,
 				6447D2532E6A33E4007B7DCC /* Frameworks */,
 				6447D2542E6A33E4007B7DCC /* Resources */,
+				6447D2A22E6A3739007B7DCC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6447D29C2E6A3739007B7DCC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				6447D2582E6A33E4007B7DCC /* MarketsWidgetKit */,
@@ -163,6 +234,28 @@
 			productReference = 6447D2702E6A33E7007B7DCC /* MarketsWidgetKitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		6447D2862E6A3736007B7DCC /* MarketWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6447D29F2E6A3739007B7DCC /* Build configuration list for PBXNativeTarget "MarketWidgetsExtension" */;
+			buildPhases = (
+				6447D2832E6A3736007B7DCC /* Sources */,
+				6447D2842E6A3736007B7DCC /* Frameworks */,
+				6447D2852E6A3736007B7DCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6447D28D2E6A3737007B7DCC /* MarketWidgets */,
+			);
+			name = MarketWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = MarketWidgetsExtension;
+			productReference = 6447D2872E6A3736007B7DCC /* MarketWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +277,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 6447D2552E6A33E4007B7DCC;
 					};
+					6447D2862E6A3736007B7DCC = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 6447D2512E6A33E4007B7DCC /* Build configuration list for PBXProject "MarketsWidgetKit" */;
@@ -203,6 +299,7 @@
 				6447D2552E6A33E4007B7DCC /* MarketsWidgetKit */,
 				6447D2652E6A33E7007B7DCC /* MarketsWidgetKitTests */,
 				6447D26F2E6A33E7007B7DCC /* MarketsWidgetKitUITests */,
+				6447D2862E6A3736007B7DCC /* MarketWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6447D26E2E6A33E7007B7DCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6447D2852E6A3736007B7DCC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +357,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6447D2832E6A3736007B7DCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +376,11 @@
 			isa = PBXTargetDependency;
 			target = 6447D2552E6A33E4007B7DCC /* MarketsWidgetKit */;
 			targetProxy = 6447D2712E6A33E7007B7DCC /* PBXContainerItemProxy */;
+		};
+		6447D29C2E6A3739007B7DCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6447D2862E6A3736007B7DCC /* MarketWidgetsExtension */;
+			targetProxy = 6447D29B2E6A3739007B7DCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,6 +669,65 @@
 			};
 			name = Release;
 		};
+		6447D2A02E6A3739007B7DCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33XQUS4CME;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarketWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MarketWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.edwin.utilities.MarketsWidgetKit.MarketWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6447D2A12E6A3739007B7DCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33XQUS4CME;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarketWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MarketWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.edwin.utilities.MarketsWidgetKit.MarketWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,6 +763,15 @@
 			buildConfigurations = (
 				6447D2812E6A33E7007B7DCC /* Debug */,
 				6447D2822E6A33E7007B7DCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6447D29F2E6A3739007B7DCC /* Build configuration list for PBXNativeTarget "MarketWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6447D2A02E6A3739007B7DCC /* Debug */,
+				6447D2A12E6A3739007B7DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
