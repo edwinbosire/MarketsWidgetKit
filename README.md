@@ -1,5 +1,7 @@
 # MarketsWidgetKit
 
+<img  height="600" alt="widgetKitSample" src="https://github.com/user-attachments/assets/8e3709ee-d902-41cb-b9d0-d61eea09467c" />
+
 ## Introduction
 
 This repository contains a collection of widgets built using WidgetKit for iOS 17. WidgetKit allows developers to create beautiful and informative widgets that can be added to the home screen.
