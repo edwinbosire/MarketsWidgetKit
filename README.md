@@ -4,6 +4,10 @@
 
 This repository contains a collection of widgets built using WidgetKit for iOS 17. WidgetKit allows developers to create beautiful and informative widgets that can be added to the home screen.
 
+<img width="400" height="870" alt="image" src="https://github.com/user-attachments/assets/0d2304e2-06f5-4f00-91f0-e3e6ee765c22" />
+<img width="400" height="870" alt="large-screenshot" src="https://github.com/user-attachments/assets/3267e067-39ae-4763-b685-8ab7ee1471f9" />
+
+
 ## Getting Started
 
 ### Requirements
