@@ -112,8 +112,7 @@ struct MarketWidgetCard: View {
 						}
 						Spacer()
 
-						Sparkline(values: quote.sparkline,
-								  strokeColor: quote.changePct >= 0 ? .green : .red)
+						SparkLine(values: quote.sparkline)
 							.frame(width: 80, height: 30)
 							.accessibilityLabel("Sparkline for \(quote.symbol)")
 
@@ -185,70 +184,6 @@ struct ResearchWidgetCard: View {
 	}
 }
 
-// MARK: - Sparkline
-struct Sparkline: View {
-	let values: [Double]
-	let strokeColor: Color
-
-	// Map a sample to a point
-	func point(_ width: CGFloat, _ height: CGFloat, _ i: Int, _ v: Double, _ minV: Double = 0, _ range: Double = 1) -> CGPoint {
-		let x = width * CGFloat(i) / CGFloat(max(values.count - 1, 1))
-		let yNorm = (v - minV) / range
-		let y = height * (1 - CGFloat(yNorm))
-		return CGPoint(x: x, y: y)
-	}
-
-	var body: some View {
-		GeometryReader { geo in
-			let minV = values.min() ?? 0
-			let maxV = values.max() ?? 1
-			let range = max(maxV - minV, 0.0001)
-
-			let width  = geo.size.width
-			let height = geo.size.height
-
-
-			// 1) Polyline
-			let linePath: Path = Path { p in
-				for (i, v) in values.enumerated() {
-					let pt = point(width, height, i, v, minV, range)
-					if i == 0 { p.move(to: pt) } else { p.addLine(to: pt) }
-				}
-			}
-
-			// 2) Filled area under the line (closed to baseline)
-			let fillPath: Path = Path { p in
-				p.move(to: CGPoint(x: 0, y: height))                  // start baseline left
-				for (i, v) in values.enumerated() {
-					p.addLine(to: point(width, height, i, v, minV, range))
-				}
-				p.addLine(to: CGPoint(x: width, y: height))           // down to baseline right
-				p.closeSubpath()
-			}
-
-			// 3) Average line (dashed)
-			let avg = values.isEmpty ? 0 : values.reduce(0, +) / Double(values.count)
-			let yAvgNorm = (avg - minV) / range
-			let yAvg = height * (1 - CGFloat(yAvgNorm))
-
-			// Draw: fill → line → avg dash
-			fillPath
-				.fill(strokeColor.opacity(0.12))
-
-			linePath
-				.stroke(lineWidth: 1.5)
-				.fill(strokeColor)
-
-			Path { p in
-				p.move(to: CGPoint(x: 0,     y: yAvg))
-				p.addLine(to: CGPoint(x: width, y: yAvg))
-			}
-			.stroke(style: StrokeStyle(lineWidth: 1, dash: [4, 3]))
-			.foregroundStyle(.secondary)
-		}
-		.accessibilityLabel("Sparkline with average")
-	}
-}
 // MARK: - Demo Data
 enum DemoData {
 	static let quotes: [QuoteSnapshot] = [

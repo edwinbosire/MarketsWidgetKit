@@ -60,6 +60,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		64172AB42E807448006D689D /* Exceptions for "MarketWidgets" folder in "MarketsWidgetKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Sparkline.swift,
+			);
+			target = 6447D2552E6A33E4007B7DCC /* MarketsWidgetKit */;
+		};
+		64172AB52E807448006D689D /* Exceptions for "MarketWidgets" folder in "MarketsWidgetKitTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Sparkline.swift,
+			);
+			target = 6447D2652E6A33E7007B7DCC /* MarketsWidgetKitTests */;
+		};
 		6447D29E2E6A3739007B7DCC /* Exceptions for "MarketWidgets" folder in "MarketWidgetsExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -88,6 +102,8 @@
 		6447D28D2E6A3737007B7DCC /* MarketWidgets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				64172AB42E807448006D689D /* Exceptions for "MarketWidgets" folder in "MarketsWidgetKit" target */,
+				64172AB52E807448006D689D /* Exceptions for "MarketWidgets" folder in "MarketsWidgetKitTests" target */,
 				6447D29E2E6A3739007B7DCC /* Exceptions for "MarketWidgets" folder in "MarketWidgetsExtension" target */,
 			);
 			path = MarketWidgets;
