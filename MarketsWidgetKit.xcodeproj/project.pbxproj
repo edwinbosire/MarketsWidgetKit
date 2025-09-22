@@ -63,6 +63,7 @@
 		64172AB42E807448006D689D /* Exceptions for "MarketWidgets" folder in "MarketsWidgetKit" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AnimatableVector.swift,
 				Sparkline.swift,
 			);
 			target = 6447D2552E6A33E4007B7DCC /* MarketsWidgetKit */;
@@ -70,6 +71,7 @@
 		64172AB52E807448006D689D /* Exceptions for "MarketWidgets" folder in "MarketsWidgetKitTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AnimatableVector.swift,
 				Sparkline.swift,
 			);
 			target = 6447D2652E6A33E7007B7DCC /* MarketsWidgetKitTests */;

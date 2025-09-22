@@ -112,7 +112,7 @@ struct MarketWidgetCard: View {
 						}
 						Spacer()
 
-						SparkLine(values: quote.sparkline)
+						SparkLine(values:quote.sparkline)
 							.frame(width: 80, height: 30)
 							.accessibilityLabel("Sparkline for \(quote.symbol)")
 
