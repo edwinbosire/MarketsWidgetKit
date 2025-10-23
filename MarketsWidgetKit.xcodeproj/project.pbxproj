@@ -65,6 +65,7 @@
 			membershipExceptions = (
 				AnimatableVector.swift,
 				Sparkline.swift,
+				ThresholdCharts.swift,
 			);
 			target = 6447D2552E6A33E4007B7DCC /* MarketsWidgetKit */;
 		};
